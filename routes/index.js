@@ -4,7 +4,7 @@ var passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/users', { title: 'Tarot Journal' });
+  res.render('index', { title: 'Tarot Journal' });
 });
 
 // Google OAuth login route

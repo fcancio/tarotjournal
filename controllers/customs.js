@@ -14,7 +14,7 @@ function create(req, res) {
 }
 
 function newCustom(req, res) {
-    res.render('customs/new', {
+    res.render('/entries/customs/new', {
         title: 'Draw Your Card'
     })
 }
