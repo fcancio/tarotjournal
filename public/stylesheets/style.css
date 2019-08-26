@@ -1,4 +1,4 @@
-html {
+/* html {
   background-color: #495087;
 }
 
@@ -44,7 +44,7 @@ main {
   display: flex;
   justify-content: center;
   align-content: center;
-}
+} */
 
 #add-custom-form {
   display: flex;
@@ -68,7 +68,7 @@ main {
   width: 700px;
 }
 
-.card-description {
+.description {
   height: 150px;
   width: 300px;
 }

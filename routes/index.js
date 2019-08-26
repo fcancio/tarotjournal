@@ -4,7 +4,7 @@ var passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Tarot Journal' });
+  res.redirect('/users', { title: 'Tarot Journal' });
 });
 
 // Google OAuth login route
@@ -20,7 +20,7 @@ module.exports = router;
  router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/users',
+    successRedirect : '/entries',
     failureRedirect : '/users'
   }
 ));

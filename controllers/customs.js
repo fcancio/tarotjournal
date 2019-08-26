@@ -6,9 +6,9 @@ module.exports = {
 };
 
 function create(req, res) {
-  var custom = new Custom(req.body);
+  var custom = new Custom(req.body)
   custom.save(function(err) {
-    if (err) return res.redirect('/customs/new');
+    if (err) return res.redirect('/entries/customs/new');
     res.redirect('/entries');
   })
 }
