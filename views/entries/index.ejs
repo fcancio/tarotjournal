@@ -20,6 +20,16 @@
             </tr>
         </thead>
         <tbody>
+            <% customs.forEach(function(e) { %>
+            <tr>
+                <th><%= e.date %></th>
+                <th><%= e.name %></th>
+                <th><%= e.description %></th>
+                <th><%= e.journal %></th>
+            </tr>
+            <% }); %>
+        </tbody>
+        <tbody>
             <th></th>
             <th></th>
             <th></th>

@@ -73,6 +73,7 @@ main {
   width: 300px;
 }
 
-.card-name {
+.card-name,
+input.date {
   width: 300px;
 }
