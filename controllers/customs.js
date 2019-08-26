@@ -2,8 +2,16 @@ var Custom = require('../models/custom');
 
 module.exports = {
   new: newCustom,
-  create
+  create,
+  show
 };
+
+function show(req, res) {
+  Custom.findById(req.params.id, function(err, custom) {     
+        res.render('entries/customs/show', { title: 'Daily Entry', custom}
+        );
+    });
+}
 
 function create(req, res) {
   var custom = new Custom(req.body)
