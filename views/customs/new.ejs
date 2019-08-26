@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <h1>Draw a card from your personal deck.</h1>
+
+    <form id="add-custom-form" action="/entries" method="POST">
+    <label>Card name</label>
+    <input type="text" name="name" class='card-name'>
+    <br><br><label>Card description</label>
+    <input type="text" class="description" name="cardDescription">
+    <br><br><label>Journal</label>
+    <input type="text" class="journal-entry" name="journal">
+    <br><input id="save-entry-button" type="submit" value="Save entry">
+    </form>
+  </body>
+</html>
+
+

@@ -1,0 +1,78 @@
+html {
+  background-color: #495087;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px 0 30px;
+}
+
+ul.nav-text {
+  list-style: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a.logo-nav {
+  margin-right: auto;
+}
+
+main {
+  background-color: #495087;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#add-custom-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#save-entry-button {
+  grid-area: button;
+  background-color: black;
+  color: white;
+}
+
+#save-entry-button:hover {
+  font-weight: bolder;
+}
+
+.journal-entry {
+  height: 150px;
+  width: 700px;
+}
+
+.card-description {
+  height: 150px;
+  width: 300px;
+}
+
+.card-name {
+  width: 300px;
+}

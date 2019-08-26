@@ -2,12 +2,8 @@ const User = require('../models/user');
 
 module.exports = {
   index,
-  test
 };
 
-function test(req, res) {
-    res.send('TEST')
-}
 
 function index(req, res, next) {
     console.log(req.query)
