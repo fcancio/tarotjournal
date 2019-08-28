@@ -1,10 +1,46 @@
-Daily Card
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+<body>
+<h1>Daily Card</h1>
 <section id="show-page">
         <div>Card: </div>
         <div><%= custom.name %></div>
         <div>Description: </div>
         <div><%= custom.description %></div>
-        <div>Journal: </div>
-        <div><%= custom.journal %></div>
 </section>
+<section id="Journal" width="100">
+        <h2>Journal</h2>
+        <% if (custom.journals.length) { %>
+        <table class="journals-table">
+                <tbody>
+                        <% custom.journals.forEach(function(j) { %>
+                        <tr>
+                                <td><%= j.timestamps %></td>
+                                <td><%= j.text %></td>
+                                <br>
+                        </tr>
+                        <% }); %>
+                </tbody>
+        </table>
+                <% } else { %>
+                <table class="journals-table">
+                        <tr><i>No entries</i></tr>
+                </table>
+                <% } %>
+<br>
+<form id="add-journal-entry" method="POST" action="/entries/customs/<%= custom._id %>/journals">
+        <input type="text" name="text" class="journal-text">
+        <input type="submit" value="Complete entry" id="add-journal-buttom">
+</form>
+</body>
+</html>
+
+
+

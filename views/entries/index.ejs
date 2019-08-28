@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-  <h1>Calendar log of daily card readings</h1>
-    <a href="/entries/customs/new">Draw a daily card</a>
-  <table>
+<%- include('../partials/header') %>
+<main>
+    <!-- <h1>Calendar log of daily card readings</h1> -->
+    <button class="dailycard"><a href="/entries/customs/new">Draw a daily card</a></button>
+        <table>
         <thead>
             <tr>
                 <th>Date</th>
                 <th>Card Name</th>
                 <th>Card Description</th>
-                <th>Journal</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <% customs.forEach(function(e) { %>
             <tr>
-                <th><%= e.date %></th>
+                <th><%= e.date.toLocaleDateString() %></th>
                 <th><%= e.name %></th>
                 <th><%= e.description %></th>
-                <th><a href="entries/customs/<%= e._id %>">DETAILS</a></th>
+                <th><a href="/entries/customs/<%= e._id %>">DETAILS</a></th>
             </tr>
             <% }); %>
         </tbody>
@@ -36,5 +28,6 @@
             <th></th>
         </tbody>
     </table>
-  </body>
+</main>
+</body>
 </html>

@@ -3,11 +3,14 @@ var Schema = mongoose.Schema;
 
 
 var digitalSchema = new Schema ({
-  name: String,
-  description: String,
-  journal: String,
-  date: Date, 
-}, {
+    card: {
+      type: String,
+      img: String,
+      name: String,
+      description: String,
+      date: Date,
+      journal: String,
+}, 
   timestamps: true
 });
 
