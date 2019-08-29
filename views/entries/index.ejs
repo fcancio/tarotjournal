@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <main>
     <!-- <h1>Calendar log of daily card readings</h1> -->
-    <button class="dailycard"><a href="/entries/customs/new">Draw a daily card</a></button>
+    <button class="dailycard"><a href="/entries/customs/new">Add an entry</a></button>
         <table id="entries-table">
         <thead>
             <tr>
@@ -15,23 +15,17 @@
         <tbody>
             <% customs.forEach(function(e) { %>
             <tr>
-                <td>
+                <th>
                     <form action="/entries/customs/<%= e._id %>?_method=DELETE" method="POST">
                     <button type="submit">X</button>
                     </form>
-                </td>
-                <td><%= e.date.toLocaleDateString() %></td>
-                <td><%= e.name %></td>
-                <td><%= e.theme %></td>
-                <td><a href="/entries/customs/<%= e._id %>">JOURNAL</a></th>
+                </th>
+                <th><%= e.date.toLocaleDateString() %></th>
+                <th><%= e.name %></th>
+                <th><%= e.theme %></th>
+                <th><a href="/entries/customs/<%= e._id %>">JOURNAL</a></th>
             </tr>
             <% }); %>
-        </tbody>
-        <tbody>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
         </tbody>
     </table>
 </main>

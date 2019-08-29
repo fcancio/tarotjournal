@@ -7,7 +7,7 @@ Tarot Journal is a web application that can be used to keep a daily account of y
 Use tarot to prompt journaling exercises.  Allow your daily card spread to help you explore different perspectives, make decisions and set your intentions for the day.
 
 ### Technology Used
-HTML, CSS, JavaScript, MongoDB, Mongoose, Node.js, Express, Google OAuth
+JavaScript, MongoDB, Mongoose, Node.js, Express, Google OAuth, Passport.js
 
 ###Wireframe and Screenshots
 
