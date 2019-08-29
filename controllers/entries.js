@@ -1,4 +1,6 @@
 const Custom = require('../models/custom')
+const Entry = require('../models/entry');
+
 
 module.exports = {
     index,

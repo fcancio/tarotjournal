@@ -14,7 +14,7 @@
         <tbody>
             <% customs.forEach(function(e) { %>
             <tr>
-                <th><%= e.date.toLocaleDateString() %></th>
+                <th><%= e.date %></th>
                 <th><%= e.name %></th>
                 <th><%= e.description %></th>
                 <th><a href="/entries/customs/<%= e._id %>">DETAILS</a></th>

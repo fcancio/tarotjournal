@@ -13,12 +13,14 @@
     <form id="add-custom-form" action="/entries" method="POST">
     <label>Date</label>
     <input type="date" name="date" class="date">
-    <br><br><label>Card name</label>
+    <br><br><label>Deck</label>
+    <input type="text" name="deck" class="deck">
+    <br><br><label>Card</label>
     <input type="text" name="name" class='card-name'>
+    <br><br><label>Overall Theme</label>
+    <input type="text" name="theme" class='card-theme'>
     <br><br><label>Card description</label>
     <input type="text" class="description" name="description">
-    <br><br><label>Journal</label>
-    <input type="text" class="journal-entry" name="journal">
     <br><input id="save-entry-button" type="submit" value="Save entry">
     </form>
   </body>

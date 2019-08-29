@@ -9,7 +9,9 @@ var journalSchema = new Schema ({
 })
 
 var customSchema = new Schema ({
+  deck: String,
   name: String,
+  theme: String,
   description: String,
   journals: [journalSchema],
   date: Date,
