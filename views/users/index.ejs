@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tarot Journal</title>
-    <link rel='stylesheet' href='/stylesheets/style.css'>
-  </head>
-  <body>
-      <div class="navbar-fixed">
-          <nav>
-            <div class="nav-wrapper">
-              <a href="" class="brand-logo left">Tarot Journal</a>
-              <ul class="right">
-                <li>
-                <% if (user) { %>
-                  <a href="/logout">Log Out</a>
-                <% } else { %>
-                  <a href="/auth/google">Login with Google</a>
-                <% } %>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-    <main>
-    <h1>Welcome to your Tarot Journal!</h1>
-    </main>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+  <title><%= title %></title>
+</head>
+<body>
+<div>
+<nav>
+  <div class="home-logo"><a href="/">Back Home</a></div>
+</div>
+</nav>
+
+<main>
+  <h1>Welcome to Tarot Journal!</h1>
+  <div class="journal-instructions">
+    <h3>How to use Tarot Journal</h3>
+    <p>
+      <li>Have your tarot deck ready</li>
+      <li>Draw your daily card</li>
+      <li>Add your daily card entry</li>
+      <li>Access the journal for your entry to write down all thoughts.  Use your daily card as a prompt to understand the aspects of your life that come forward.</li>
+    </p>
+  </div>
+  <% if (user) { %>
+    <a href="/logout">Log out of your Journal</a>
+    <% } else { %>
+      <a href="/auth/google">Log into your Journal</a>
+      <% } %>
+</main>
 </body>
 </html>

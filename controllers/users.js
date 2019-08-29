@@ -6,6 +6,7 @@ module.exports = {
 
 function index(req, res, next) {
       res.render('users/index', {
+        title: 'Tarot Journal',
         user: req.user,
     });
   }
