@@ -5,7 +5,15 @@ const Entry = require('../models/entry');
 module.exports = {
     index,
     show,
+    delete: deleteEntry
   };
+
+function deleteEntry(req, res) {
+    Custom.findByIdAndRemove(req.params.id, (err, custom) => {
+      console.log(req.params.id, "this is the stuff to delete");
+      res.redirect("/entries");
+    });
+}
   
 function show(req, res) {
     Custom.findById(req.params.id, function(err, custom) {     

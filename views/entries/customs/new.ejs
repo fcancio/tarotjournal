@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
   </head>
   <body>
   <h1>Draw a card from your personal deck.</h1>
@@ -16,9 +17,9 @@
     <br><br><label>Deck</label>
     <input type="text" name="deck" class="deck">
     <br><br><label>Card</label>
-    <input type="text" name="name" class='card-name'>
+    <input type="text" name="name" class='card-name' required>
     <br><br><label>Overall Theme</label>
-    <input type="text" name="theme" class='card-theme'>
+    <input type="text" name="theme" class='card-theme' required>
     <br><br><label>Card description</label>
     <input type="text" class="description" name="description">
     <br><input id="save-entry-button" type="submit" value="Save entry">

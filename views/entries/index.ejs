@@ -5,19 +5,25 @@
         <table>
         <thead>
             <tr>
+                <th>delete</th>
                 <th>Date</th>
                 <th>Card Name</th>
-                <th>Card Description</th>
+                <th>Theme</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <% customs.forEach(function(e) { %>
             <tr>
-                <th><%= e.date %></th>
-                <th><%= e.name %></th>
-                <th><%= e.description %></th>
-                <th><a href="/entries/customs/<%= e._id %>">DETAILS</a></th>
+                <td>
+                    <form action="/entries/customs/<%= e._id %>?_method=DELETE" method="POST">
+                    <button type="submit">X</button>
+                    </form>
+                </td>
+                <td><%= e.date.toLocaleDateString() %></td>
+                <td><%= e.name %></td>
+                <td><%= e.theme %></td>
+                <td><a href="/entries/customs/<%= e._id %>">JOURNAL</a></th>
             </tr>
             <% }); %>
         </tbody>

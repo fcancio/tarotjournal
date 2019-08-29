@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
+var methodOverride = require('method-override');
 
 // load env vars
 require('dotenv').config();
@@ -16,9 +17,9 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var customsRouter = require('./routes/customs')
-var entriesRouter = require('./routes/entries')
-var journalsRouter = require('./routes/journals')
+var customsRouter = require('./routes/customs');
+var entriesRouter = require('./routes/entries');
+var journalsRouter = require('./routes/journals');
 
 // create Express app
 var app = express();
@@ -39,6 +40,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
