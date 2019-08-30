@@ -129,6 +129,10 @@ textarea.description {
   height: 100px;
 }
 
+i.createdAt {
+  font-size: 12px;
+}
+
 #add-journal-entry {
   margin-bottom: 50px;
 }
@@ -153,8 +157,7 @@ th a {
 
 
 nav a:hover,
-th a:hover,
-button.delete:hover {
+th a:hover {
   font-weight: bolder;
   text-decoration: underline;
 }
@@ -206,12 +209,22 @@ h2.property-title {
   color: whitesmoke;
 }
 
-p.journal-entry {
+div.journal-entry {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 8px;
   border-radius: 5px;
   color: #484A7B;
   margin: 5px;
+}
+
+button.delete {
+  float: right;
+  color: #31516E;
+}
+
+button.delete:hover {
+  color: black;
+  font-weight: bolder;
 }
 
 /*

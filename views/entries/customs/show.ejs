@@ -18,12 +18,14 @@
                 <section class="journal">
                 <% if (custom.journals.length) { %>
                         <% custom.journals.forEach(function(j) { %>
-                                <p class="journal-entry">
-                                        <i><%= j.text %></i>
+                                <div class="journal-entry">
+                                        <i>
                                         <form action="/entries/customs/<%= custom._id %>/journals/<%= j._id %>?_method=DELETE" method="POST">
-                                        <button type="submit" class="delete">X</button>
+                                        <button type="submit" class="delete">x</button>
                                         </form>
-                                </p>
+                                        <%= j.text %></i><br>
+                                        <i class="createdAt"><%= `${j.createdAt.toLocaleDateString()} ${j.createdAt.toLocaleTimeString()}` %></i>
+                                </div>
                         <% }); %>
                 <% } else { %>
                         <i>No entries</i>

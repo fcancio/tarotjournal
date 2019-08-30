@@ -3,7 +3,10 @@ var Schema = mongoose.Schema;
 
 var journalSchema = new Schema ({
   text: String,
-  date: Date,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  }
 }, {
   timestamps: true
 })

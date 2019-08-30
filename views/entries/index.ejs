@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
 <body class="tarot-log">
 <main>
-    <h1><%= title %></h1>
+    <% if (user) { %>
+    <h1><%= user.name %>'s <%= title %></h1>
     <div>
         <button class="add"><a href="/entries/customs/new">+ NEW</a></button>
     </div>
@@ -36,6 +37,9 @@
         <% } %>
         </tbody>
     </table> 
+    <% } else { %>
+        <h3><i>Log in to view your entries</i></h3>
+    <% } %>
 </main>
 </body>
 </html>
