@@ -34,6 +34,6 @@ JavaScript, MongoDB, Mongoose, Node.js, Express, Google OAuth, Passport.js
 
 1. Complete user model functionality  
 2. Create digital deck MVC
-    - <a href="https://github.com/howlCode/tarot_api>Tarot API</a>
+    - <a href="https://github.com/howlCode/tarot_api">Tarot API</a>
 3. View entries by month
 4. View trends in cards and suits
