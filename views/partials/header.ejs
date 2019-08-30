@@ -8,19 +8,21 @@
   <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
   <title><%= title %></title>
 </head>
-<div>
+<div class="nav">
 <nav>
   <div class="home-logo"><a href="/">Back Home</a></div>
   <ul class="nav-text">
     <li>
-      <% if (user) { %>
-        <a href="/logout">Log Out</a>
-        <% } else { %>
-          <a href="/auth/google">Login with Google</a>
-          <% } %>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <% if (user) { %>
+          <li><a href="/entries">All Entries</a></li>
+          <li><a href="/entries/customs/new">Add Card</a></li>
+          <li><a href="/logout">Log Out</a></li>
+          <% } else { %>
+            <a href="/auth/google">Login with Google</a>
+        <% } %>
+    </li>
+  </ul>
+  </div>
+</nav>
 </div>
  

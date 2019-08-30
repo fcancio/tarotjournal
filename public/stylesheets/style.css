@@ -3,6 +3,13 @@
   font-family: 'Manjari', sans-serif;
 }
 
+body.homepage {
+background-image: url(/images/moon-clouds.jpg!d);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
 body.tarot-log {
 background-image: url(/images/moon-clouds.jpg!d);
 background-repeat: no-repeat;
@@ -28,29 +35,36 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+}
+
+main.homepage {
+  justify-content: center;
 }
 
 nav {
   display: flex;
+  flex-direction: row;
   background: rgba(31, 51, 61, 0.7);
   border-radius: 7px;
   color: white;
   justify-content: flex-end;
   align-items: center;
   padding: 0 30px 0 30px;
-  /* position: fixed;
-  top: 0;
-  width: 100%; */
 }
 
 .home-logo {
   margin-right: auto;
 }
 
-ul {
+ul.nav-text {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+ul.nav-text li {
+  margin: 0px 10px;
 }
 
 nav a,
@@ -72,14 +86,38 @@ h2.property-title {
   color: #484A7B;
 }
 
+h3 {
+  color: #484A7B;
+}
+
 #entries-table,
-#show-page {
+#show-page,
+#add-custom-form{
   background-color: rgba(207, 209, 207, 0.7);
   padding: 10px;
   border: 2px solid #31516E;
   border-radius: 10px;
   table-layout: fixed;
   width: 100%;
+}
+
+div.journal-instructions {
+  background-color: rgba(207, 209, 207, 0.7);
+  padding: 10px;
+  border: 2px solid #31516E;
+  border-radius: 10px;
+  text-align: justify;
+  width: 600px;
+}
+
+div.journal-instructions li {
+  list-style: decimal;
+  margin-bottom: 8px;
+}
+
+textarea.description {
+  width: 300px;
+  height: 150px;
 }
 
 #show-page {

@@ -6,6 +6,7 @@
         <button class="add"><a href="/entries/customs/new">+ NEW</a></button>
     </div>
     <br>
+    <% if (customs.length) { %>
         <table id="entries-table">
         <thead>
             <tr>
@@ -30,6 +31,9 @@
                 <th><a href="/entries/customs/<%= e._id %>">JOURNAL</a></th>
             </tr>
             <% }); %>
+            <% } else { %>
+                <i>No Entries Yet</i>
+        <% } %>
         </tbody>
     </table> 
 </main>
