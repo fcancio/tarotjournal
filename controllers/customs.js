@@ -19,12 +19,17 @@ function edit(req, res) {
       });
 }
 
-// Not working; fix
+// Please fix
 function update(req, res) {
   console.log(req.params.id)
-  Custom.findByIdAndUpdate(req.params.id,  req.body, function(err, custom) {
+  Custom.findByIdAndUpdate(req.params.id,  req.body, {
+    function(err, custom) {
       // console.log(req.body)
-      res.redirect(`entries`);
+      res.redirect(`/entries/customs/${custom._id}`, {
+        custom
+      
+      });
+    }
   });
 };
 

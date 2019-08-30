@@ -3,7 +3,7 @@
     <main class="new-card">
     <h1 class="dark"><%= title %></h1>
       <div class="new-card">
-        <form id="edit-custom-form" action="/entries/customs/<%= custom._id %>?_method=PUT" method="POST">
+        <form id="edit-custom-form" action="/entries/customs/<%= custom._id %>?_method=PUT" method="PUT">
         <br><br><label>Deck</label>
         <br><input type="text" name="deck" class="card-deck" value="<%= custom.deck %>">
         <br><br><label>Card</label>
