@@ -3,8 +3,30 @@ var Custom = require('../models/custom');
 module.exports = {
   new: newCustom,
   create,
-  show
+  show,
+  edit,
+  update
 };
+
+function edit(req, res) {
+  Custom.findById(req.params.id)
+      .exec(function (err, custom) {
+          res.render(`entries/customs/edit`, {
+              title: `Edit Entry`,
+              user: req.user,
+              custom
+          });
+      });
+}
+
+function update(req, res) {
+  console.log(req.params.id)
+  Custom.findByIdAndUpdate(req.params.id,  req.body, function(err, custom) {
+      // console.log(req.body)
+      res.redirect(`entries`);
+  });
+};
+
 
 function show(req, res) {
   Custom.findById(req.params.id, function(err, custom) {     

@@ -193,7 +193,8 @@ thead th:nth-child(5) {
 }
 
 button.add,
-button.delete {
+button.delete,
+button.edit {
   background-color: transparent;
   border: none;
   padding: 2px;
@@ -222,12 +223,14 @@ div.journal-entry {
   margin: 5px;
 }
 
-button.delete {
+button.delete,
+button.edit {
   float: right;
   color: #31516E;
 }
 
-button.delete:hover {
+button.delete:hover,
+button.edit:hover {
   color: black;
   font-weight: bolder;
 }

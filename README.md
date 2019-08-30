@@ -2,7 +2,7 @@
 
 
 ## Objective  
-Tarot Journal is a web application that can be used to keep a daily account of your tarot card readings and reflections.
+Tarot Journal is a web application that can be used to keep a daily account of your tarot card spreads.
 
 Use tarot to prompt journaling exercises.  Allow your daily card spread to help you explore different perspectives, make decisions and set your intentions for the day.
 
@@ -13,10 +13,6 @@ JavaScript, MongoDB, Mongoose, Node.js, Express, Google OAuth, Passport.js
 ![tarotjournal_log](https://i.imgur.com/8JKknSp.png)
 ![tarotjournal_new](https://i.imgur.com/gQZyxUz.png)
 ![tarotjournal_show](https://i.imgur.com/TRWEE8a.png)
-
-## Getting Started
-<a href="https://tarot-journal.herokuapp.com/">Tarot Journal</a> 
-
 
 ## User stories
  As a user, I want...
@@ -30,6 +26,8 @@ JavaScript, MongoDB, Mongoose, Node.js, Express, Google OAuth, Passport.js
 - Custom deck input form
 - Journal input 
 
+## Getting Started
+<a href="https://tarot-journal.herokuapp.com/">Tarot Journal</a> 
 
 ## Next Steps and stretch goals:
 <a href="https://trello.com/b/JuSjWJJl/project2">Trello board</a>  

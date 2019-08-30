@@ -1,0 +1,21 @@
+<%- include('../../partials/header') %>
+  <body class="edit-daily-card">
+    <main class="new-card">
+    <h1><%= title %></h1>
+      <div class="new-card">
+        <form id="edit-custom-form" action="/entries/customs/<%= custom._id %>?_method=PUT" method="POST">
+        <br><br><label>Deck</label>
+        <br><input type="text" name="deck" class="card-deck" value="<%= custom.deck %>">
+        <br><br><label>Card</label>
+        <br><input type="text" name="name" class='card-name' value="<%= custom.name %>"required>
+        <br><br><label>Overall Theme</label>
+        <br><input type="text" name="theme" class='card-theme' value="<%= custom.theme %>"required>
+        <br><br><label>Card description</label>
+        <br><textarea class="description" name="description" wrap="soft"><%= custom.description %></textarea>
+        <br><input id="save-entry-button" type="submit" value="Save changes">
+        </form>
+    </div>
+  </main>
+  </body>
+</html>
+

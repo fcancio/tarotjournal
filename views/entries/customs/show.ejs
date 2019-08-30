@@ -3,8 +3,11 @@
 <main>
 <h1 class="dark"><%= title %></h1>
 <section id="show-page">
+        <form action="/entries/customs/<%= custom._id %>/edit" method="GET" class="edit">
+                <button type="submit" class="edit">EDIT</button>
+        </form><br><br>
         <div class="property-title">Date</div>
-        <div class="value-title"><%= custom.date.toLocaleDateString() %></div>
+        <div class="value-title"><%= `${custom.date.toLocaleDateString()} ${custom.date.toLocaleTimeString()}` %></div>
         <br><div class="property-title">Deck </div>
         <div class="value-title"><%= custom.deck %></div>
         <br><div class="property-title">Card </div>
