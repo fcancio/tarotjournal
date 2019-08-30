@@ -19,6 +19,7 @@ function edit(req, res) {
       });
 }
 
+// Not working; fix
 function update(req, res) {
   console.log(req.params.id)
   Custom.findByIdAndUpdate(req.params.id,  req.body, function(err, custom) {
