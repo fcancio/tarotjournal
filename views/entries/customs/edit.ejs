@@ -1,7 +1,7 @@
 <%- include('../../partials/header') %>
   <body class="edit-daily-card">
     <main class="new-card">
-    <h1><%= title %></h1>
+    <h1 class="dark"><%= title %></h1>
       <div class="new-card">
         <form id="edit-custom-form" action="/entries/customs/<%= custom._id %>?_method=PUT" method="POST">
         <br><br><label>Deck</label>

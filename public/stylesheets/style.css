@@ -31,6 +31,15 @@ background-size: cover;
 background-attachment: fixed;
 }
 
+body.edit-daily-card {
+background-image: url(/images/moon-pinkclouds.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+background-color: burlywood;
+background-blend-mode: screen;
+}
+
 main {
   height: 100vh;
   display: flex;
