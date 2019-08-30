@@ -25,7 +25,7 @@ function show(req, res) {
   function index(req, res) {
       Custom.find({}, function(err, customs) {
           res.render('entries', {
-          title: 'Card Log',
+          title: 'Your Tarot Log',
           customs,
           user: req.user });
       });

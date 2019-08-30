@@ -10,7 +10,8 @@ function show(req, res) {
   Custom.findById(req.params.id, function(err, custom) {     
         res.render('entries/customs/show', { 
           title: 'Daily Entry', 
-          custom }
+          custom,
+          user: req.user }
         );
     });
 }
@@ -25,7 +26,7 @@ function create(req, res) {
 
 function newCustom(req, res) {
     res.render('entries/customs/new', {
-        title: 'Draw Your Card',
+        title: 'Add Your Daily Card',
         user: req.user 
     })
 }

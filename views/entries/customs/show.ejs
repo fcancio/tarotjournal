@@ -1,49 +1,37 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-  </head>
-<body>
-<h1>Card Details</h1>
+<%- include('../../partials/header') %>
+<body class="daily-entry">
+<main>
+<h1 class="dark"><%= title %></h1>
 <section id="show-page">
-        <div>Deck: </div>
-        <div><%= custom.deck %></div>
-        <div>Card: </div>
-        <div><%= custom.name %></div>
-        <div>Overall Theme: </div>
-        <div><%= custom.theme %></div>
-        <div>Description: </div>
-        <div><%= custom.description %></div>
-</section>
-<section id="Journal" width="100">
-        <h2>Journal</h2>
-        <% if (custom.journals.length) { %>
-        <table class="journals-table">
-                <tbody>
+        <div class="property-title">Date</div>
+        <div class="value-title"><%= custom.date.toLocaleDateString() %></div>
+        <br><div class="property-title">Deck </div>
+        <div class="value-title"><%= custom.deck %></div>
+        <br><div class="property-title">Card </div>
+        <div class="value-title"><%= custom.name %></div>
+        <br><div class="property-title">Overall Theme </div>
+        <div class="value-title"><%= custom.theme %></div>
+        <br><div class="property-title">Description </div>
+        <div class="value-title"><%= custom.description %></div>
+        <br>
+        <div class="subtitle"><h2 class="property-title">Journal</h2></div>
+                <section class="journal">
+                <% if (custom.journals.length) { %>
                         <% custom.journals.forEach(function(j) { %>
-                        <tr>
-                                <td><%= j.timestamps %></td>
-                                <td><%= j.text %></td>
-                                <br>
-                        </tr>
+                                <p class="journal-entry"><i><%= j.text %></i></p>
                         <% }); %>
-                </tbody>
-        </table>
                 <% } else { %>
-                <table class="journals-table">
-                        <tr><i>No entries</i></tr>
-                </table>
+                        <i>No entries</i>
                 <% } %>
+                </section>
+</section>
 <br>
 <form id="add-journal-entry" method="POST" action="/entries/customs/<%= custom._id %>/journals">
-        <input type="text" name="text" class="journal-text">
-        <input type="submit" value="Complete entry" id="add-journal-buttom">
+        <textarea name="text" class="journal-text" wrap="soft"></textarea>
+        <br><input type="submit" value="Add entry" id="add-journal-button">
 </form>
+
+</main>
 </body>
 </html>
 

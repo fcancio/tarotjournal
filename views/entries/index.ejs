@@ -1,11 +1,15 @@
 <%- include('../partials/header') %>
+<body class="tarot-log">
 <main>
-    <!-- <h1>Calendar log of daily card readings</h1> -->
-    <button class="dailycard"><a href="/entries/customs/new">Add an entry</a></button>
+    <h1><%= title %></h1>
+    <div>
+        <button class="add"><a href="/entries/customs/new">+ NEW</a></button>
+    </div>
+    <br>
         <table id="entries-table">
         <thead>
             <tr>
-                <th>delete</th>
+                <th></th>
                 <th>Date</th>
                 <th>Card Name</th>
                 <th>Theme</th>
@@ -17,7 +21,7 @@
             <tr>
                 <th>
                     <form action="/entries/customs/<%= e._id %>?_method=DELETE" method="POST">
-                    <button type="submit">X</button>
+                    <button type="submit" class="delete">X</button>
                     </form>
                 </th>
                 <th><%= e.date.toLocaleDateString() %></th>
@@ -27,7 +31,7 @@
             </tr>
             <% }); %>
         </tbody>
-    </table>
+    </table> 
 </main>
 </body>
 </html>

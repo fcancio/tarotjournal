@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-  </head>
-  <body>
-  <h1>Draw a card from your personal deck.</h1>
+<%- include('../../partials/header') %>
+  <body class="add-daily-card">
+    <main>
+    <h1><%= title %></h1>
 
     <form id="add-custom-form" action="/entries" method="POST">
     <label>Date</label>
@@ -24,6 +16,7 @@
     <input type="text" class="description" name="description">
     <br><input id="save-entry-button" type="submit" value="Save entry">
     </form>
+    </main>
   </body>
 </html>
 

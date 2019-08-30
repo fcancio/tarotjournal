@@ -3,25 +3,33 @@
   font-family: 'Manjari', sans-serif;
 }
 
-body {
+body.tarot-log {
+background-image: url(/images/moon-clouds.jpg!d);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+body.daily-entry {
 background-image: url(/images/background.jpeg);
 background-repeat: no-repeat;
 background-size: cover;
+background-attachment: fixed;
+}
+
+body.add-daily-card {
+background-image: url(/images/moon-pinkclouds.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
 }
 
 main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-}
-
-#entries-table {
-  background-color: rgba(207, 209, 207, 0.7);
-  padding: 10px;
-  border: 2px solid #31516E;
-  border-radius: 10px;
 }
 
 nav {
@@ -32,8 +40,10 @@ nav {
   justify-content: flex-end;
   align-items: center;
   padding: 0 30px 0 30px;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
 }
-
 
 .home-logo {
   margin-right: auto;
@@ -43,9 +53,58 @@ ul {
   list-style: none;
 }
 
-nav a {
+nav a,
+button.add a:hover,
+button.delete {
   text-decoration: none;
   color: whitesmoke;
+}
+
+h1{
+  color: rgba(207, 209, 207, 0.7);
+}
+
+h1.dark {
+  color:  rgba(31, 51, 61, 0.7);
+}
+
+h2.property-title {
+  color: #484A7B;
+}
+
+#entries-table,
+#show-page {
+  background-color: rgba(207, 209, 207, 0.7);
+  padding: 10px;
+  border: 2px solid #31516E;
+  border-radius: 10px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#show-page {
+ text-align: center;
+}
+
+.journal-text {
+  width: 600px;
+  height: 100px;
+}
+
+#add-journal-entry {
+  margin-bottom: 50px;
+}
+
+div.property-title {
+  font-size: 15px;
+  padding-bottom: 5px;
+  /* text-decoration: underline; */
+  color: #484A7B;
+}
+
+div.value-title {
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 th a {
@@ -54,22 +113,72 @@ th a {
   color: #31516E;
 }
 
+
 nav a:hover,
-th a:hover {
+th a:hover,
+button.delete:hover {
   font-weight: bolder;
   text-decoration: underline;
 }
 
+thead {
+  color: #66551e;
+  font-size: 20px;
+}
+
+thead th:nth-child(1) {
+  width: 5%;
+}
+
+thead th:nth-child(2) {
+  width: 10%;
+}
+
+thead th:nth-child(3) {
+  width: 30%;
+}
+
+thead th:nth-child(4) {
+  width: 30%;
+}
+
+thead th:nth-child(5) {
+  width: 20%;
+}
+
+button.add,
+button.delete {
+  background-color: transparent;
+  border: none;
+  padding: 2px;
+  font-size: 15px;
+}
+
+button.add a {
+  text-decoration: none;
+  color: rgba(207, 209, 207, 0.7);
+}
+
+div.subtitle {
+  width: 100%;
+  background-color:  rgba(77, 64, 107, 0.7);
+}
+
+h2.property-title {
+  color: whitesmoke;
+}
+
+p.journal-entry {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px;
+  border-radius: 5px;
+  color: #484A7B;
+  margin: 5px;
+}
 
 /*
-a {
-  color: white;
-  text-decoration: none;
-}
 
-button.dailycard {
-  background-color: black;
-}
+
 
 main {
   border: 2px solid black;
