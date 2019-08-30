@@ -17,7 +17,11 @@ var customSchema = new Schema ({
   theme: String,
   description: String,
   journals: [journalSchema],
-  date: Date,
+  date: {
+    type: Date,
+    default: Date.now,
+    required: true
+  }
 }, {
   timestamps: true
 });

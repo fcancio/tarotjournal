@@ -8,7 +8,16 @@ var userSchema = new Schema({
   googleId: String,
   myEntries: [{
     type: Schema.Types.ObjectId,
-    ref: 'Entry'
+    ref: [entrySchema]
+  }]
+}, {
+  timestamps: true
+});
+
+var entrySchema = new Schema({
+  custom: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Custom'
   }]
 }, {
   timestamps: true

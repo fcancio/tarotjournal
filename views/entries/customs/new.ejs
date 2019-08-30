@@ -1,20 +1,20 @@
 <%- include('../../partials/header') %>
   <body class="add-daily-card">
-    <main>
+    <main class="new-card">
     <h1><%= title %></h1>
       <div class="new-card">
         <form id="add-custom-form" action="/entries" method="POST">
         <label>Date</label>
-        <input type="date" name="date" class="date">
+        <br><input type="datetime-local" name="date" class="card-date">
         <br><br><label>Deck</label>
-        <input type="text" name="deck" class="deck">
+        <br><input type="text" name="deck" class="card-deck">
         <br><br><label>Card</label>
-        <input type="text" name="name" class='card-name' required>
+        <br><input type="text" name="name" class='card-name' required>
         <br><br><label>Overall Theme</label>
-        <input type="text" name="theme" class='card-theme' required>
+        <br><input type="text" name="theme" class='card-theme' required>
         <br><br><label>Card description</label>
         <br><textarea class="description" name="description" wrap="soft"></textarea>
-        <br><input id="save-entry-button" type="submit" value="Save entry">
+        <br><input id="save-entry-button" type="submit" value="Save card">
         </form>
     </div>
   </main>

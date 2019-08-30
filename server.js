@@ -16,7 +16,6 @@ require('./config/passport');
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var customsRouter = require('./routes/customs');
 var entriesRouter = require('./routes/entries');
 var journalsRouter = require('./routes/journals');
@@ -43,7 +42,6 @@ app.use(passport.session());
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/entries', entriesRouter)
 app.use('/', customsRouter);
 app.use('/', journalsRouter);
